@@ -1,3 +1,14 @@
+<% if user_signed_in? %>
+ 
+ <div class="hero-unit ">
+
+	<h2> A un paso de crear tu fabulosa web!!!</h2>
+</div>
+
+	<img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8SkbKDhvMf1CnhS7kUnFYp4f_ZpeH_oIwZTMvO50V1zmP8sFklQ"/>
+
+<% else %>
+
 <div class="hero-unit ">
 
 	<h1>Aprende código tu mismo!!!</h1>
@@ -7,7 +18,7 @@
 		Acá aprenderás paso a paso como hacer tu sitio al estilo de los más grandes
 	</p>
 
-	<%= link_to "Inscríbete hoy por sólo $49.990!!", "#", class: "btn btn-primary btn-large" %>
+	<%= link_to "Inscríbete hoy por sólo $49.990!!", new_user_registration_path, class: "btn btn-primary btn-large" %>
 
 </div>
 
@@ -42,6 +53,6 @@
 	<p></p>
 	
 
-	
+	<% end %>
 
 

@@ -10,7 +10,8 @@
       </a>
  
       <!-- Be sure to leave the brand out there if you want it shown -->
-      <a class="brand" href="#">En un Mes Rails </a>
+      
+      <%= link_to "En un Mes Rails", root_path, class:"brand" %>
  
       <!-- Everything you want hidden at 940px or less, place within here -->
       <div class="nav-collapse collapse">
@@ -24,7 +25,12 @@
 	  	</ul>
 	     
        <ul class="nav pull-right">
-              <li><%= link_to 'Login',  '#' %></li>
+            <% if user_signed_in? %>
+              <li><%= link_to "Editar perfil" ,  edit_user_registration_path %></li>
+              <li><%= link_to 'Cerrar sesión',  destroy_user_session_path, method: :delete %></li>
+            <% else %>
+              <li><%= link_to 'Iniciar sesión',  new_user_session_path %></li>
+            <%end %>
         </ul>
         
        </div>
