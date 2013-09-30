@@ -21,3 +21,5 @@ doc/
 
 #Ignore Paperclup uploaded files
 /public/system
+# Ignore sampleimages
+/sampleimage
